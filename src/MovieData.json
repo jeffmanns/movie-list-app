@@ -1,0 +1,49 @@
+{
+  "movies": [
+    {
+      "index": 0,
+      "category": "Drama",
+      "title": "Saving Private Ryan",
+      "duration": 170,
+      "rating": "R",
+      "photoURL": "https://images-na.ssl-images-amazon.com/images/I/51u0J5sgTXL._AC_.jpg",
+      "isWatched": false
+    },
+    {
+      "index": 1,
+      "category": "Comedy",
+      "title": "Talladega Nights: The Ballad of Ricky Bobby",
+      "duration": 108,
+      "rating": "PG-13",
+      "photoURL": "https://imagehost.vendio.com/bin/imageserver.x/00000000/comicod/talladeganightss.jpg",
+      "isWatched": false
+    },
+    {
+      "index": 2,
+      "category": "RomCom",
+      "title": "You've Got Mail",
+      "duration": 119,
+      "rating": "PG",
+      "photoURL": "https://images-na.ssl-images-amazon.com/images/I/51Fas4vPGcL._AC_.jpg",
+      "isWatched": false
+    },
+    {
+      "index": 3,
+      "category": "Documentary",
+      "title": "Icarus",
+      "duration": 121,
+      "rating": "PG-13",
+      "photoURL": "https://m.media-amazon.com/images/M/MV5BY2QyZWZjY2UtMTJjZS00YmFlLWJmM2QtZTczODc5MTFkYjQyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+      "isWatched": false
+    },
+    {
+      "index": 4,
+      "category": "BioPic",
+      "title": "Lincoln",
+      "duration": 150,
+      "rating": "PG-13",
+      "photoURL": "https://images-na.ssl-images-amazon.com/images/I/51Ywge5qTuL._AC_.jpg",
+      "isWatched": false
+    }
+  ]
+}
