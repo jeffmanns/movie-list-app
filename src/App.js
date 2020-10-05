@@ -1,5 +1,6 @@
 import React from "react";
-import "./App.css";
+import { WatchList } from "./WatchList";
+import "../src/styles.css";
 
 // function App() {
 //   return (
@@ -23,8 +24,6 @@ import "./App.css";
 // }
 
 // export default App;
-
-import { WatchList } from "./WatchList";
 
 export default class App extends React.Component {
   constructor(props) {
