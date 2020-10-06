@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import MovieCard from "./MovieCard";
-import MovieData from "./MovieData.json";
 
 const WatchList = (props) => {
   const movies = props.movies;
 
   const [isWatched, setIsWatched] = useState(false);
 
-  const handleClick = (status) => {
-    isWatched = status;
-    setIsWatched(true);
-    console.log(isWatched);
-    console.log(movies);
+  const handleClick = (id) => {
+    //isWatched = status;
+    //setIsWatched(movies[id].isWatched);
+    const newMovieArray = [...movies];
+    newMovieArray[id].isWatched = !movies[id].isWatched;
+    setIsWatched(newMovieArray);
+    console.log(newMovieArray);
+    //console.log(movies[id].isWatched);
+    console.log(id);
   };
 
   return (
@@ -31,7 +34,7 @@ const WatchList = (props) => {
                 rating={movie.rating}
                 photoURL={movie.photoURL}
                 isWatched={movie.isWatched}
-                onClick={() => handleClick(movie.isWatched)}
+                onClick={(id) => handleClick(id)}
               />
             </div>
           );

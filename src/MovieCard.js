@@ -23,9 +23,7 @@ const MovieCard = (props) => {
         </div>
       </div>
       <div className="movie-container-footer">
-        <button onClick={() => props.onClick({ isWatched })}>
-          Is it working??
-        </button>
+        <button onClick={() => props.onClick(id)}>dammit</button>
       </div>
     </div>
   );
