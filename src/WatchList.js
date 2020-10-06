@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import MovieCard from "./MovieCard";
 import MovieData from "./MovieData.json";
 
-const WatchList = () => {
-  const movies = MovieData.movies;
+const WatchList = (props) => {
+  const movies = props.movies;
+
+  const [isWatched, setIsWatched] = useState(false);
+
+  const handleClick = (status) => {
+    isWatched = status;
+    setIsWatched(true);
+    console.log(isWatched);
+    console.log(movies);
+  };
 
   return (
     <div className="watch-list-container">
@@ -21,6 +30,8 @@ const WatchList = () => {
                 duration={movie.duration}
                 rating={movie.rating}
                 photoURL={movie.photoURL}
+                isWatched={movie.isWatched}
+                onClick={() => handleClick(movie.isWatched)}
               />
             </div>
           );

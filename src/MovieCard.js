@@ -7,13 +7,7 @@ const MovieCard = (props) => {
   const duration = props.duration;
   const rating = props.rating;
   const photoURL = props.photoURL;
-
-  const handleClick = (id) => {
-    // const movies = this.movies;
-    // movies[id] = this.state.isWatched ? "Watched" : "Not Watched";
-    // this.setState({ isWatched: !this.state.isWatched });
-    console.log(id);
-  };
+  var isWatched = props.isWatched;
 
   return (
     <div className="movie-container">
@@ -29,7 +23,9 @@ const MovieCard = (props) => {
         </div>
       </div>
       <div className="movie-container-footer">
-        <button onClick={() => handleClick({ id })}>Is it working??</button>
+        <button onClick={() => props.onClick({ isWatched })}>
+          Is it working??
+        </button>
       </div>
     </div>
   );
