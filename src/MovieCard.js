@@ -1,13 +1,12 @@
 import React from "react";
 
 const MovieCard = (props) => {
-  const id = props.index;
   const title = props.title;
   const category = props.category;
   const duration = props.duration;
   const rating = props.rating;
   const photoURL = props.photoURL;
-  var isWatched = props.isWatched;
+  const isWatched = props.isWatched;
 
   return (
     <div className="movie-container">
@@ -23,9 +22,11 @@ const MovieCard = (props) => {
         </div>
       </div>
       <div className="movie-container-footer">
-        <button onClick={() => props.onClick({ isWatched })}>
-          Is it working??
-        </button>
+        {isWatched ? (
+          <button onClick={() => props.onClick({ isWatched })}>Un-watch</button>
+        ) : (
+          <button onClick={() => props.onClick({ isWatched })}>Watch</button>
+        )}
       </div>
     </div>
   );

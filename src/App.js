@@ -1,10 +1,10 @@
 import React from "react";
 import WatchList from "./WatchList";
 import "../src/styles.css";
-import MovieData from "./MovieData.json";
+//import MovieData from "./MovieData.json";
 
 export default function App() {
-  return <WatchList {...MovieData} />;
+  return <WatchList />;
 }
 
 // const handleClick = (key) => {
