@@ -1,6 +1,7 @@
 import React from "react";
 
 const MovieCard = (props) => {
+  const id = props.index;
   const title = props.title;
   const category = props.category;
   const duration = props.duration;
@@ -23,9 +24,10 @@ const MovieCard = (props) => {
       </div>
       <div className="movie-container-footer">
         {isWatched ? (
-          <button onClick={() => props.onClick({ isWatched })}>Un-watch</button>
+          // give the index of the movie to the onClick as a param
+          <button onClick={() => props.onClick(id)}>Un-watch</button>
         ) : (
-          <button onClick={() => props.onClick({ isWatched })}>Watch</button>
+          <button onClick={() => props.onClick(id)}>Watch</button>
         )}
       </div>
     </div>
