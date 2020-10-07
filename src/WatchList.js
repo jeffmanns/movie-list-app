@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import MovieCard from "./MovieCard";
+import MovieData from "./MovieData.json";
 
-const WatchList = (props) => {
-  const movies = props.movies;
+const WatchList = () => {
+  const movies = MovieData.movies;
 
   const [isWatched, setIsWatched] = useState(false);
 
+  //using the index of the movie in the movies array, we can use a hook to set a new value for isWatched
   const handleClick = (id) => {
-    //isWatched = status;
-    //setIsWatched(movies[id].isWatched);
-    const newMovieArray = [...movies];
-    newMovieArray[id].isWatched = !movies[id].isWatched;
-    setIsWatched(newMovieArray);
-    console.log(newMovieArray);
-    //console.log(movies[id].isWatched);
-    console.log(id);
+    //can use the same array that we're getting our data from
+    movies[id].isWatched = !movies[id].isWatched;
+    //can set just this property in the array
+    setIsWatched(movies[id].isWatched);
+    console.log("movie index #", id);
+    console.log("is watched?", movies[id].isWatched);
   };
 
   return (
