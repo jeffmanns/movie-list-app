@@ -1,8 +1,8 @@
 import React from "react";
-import WatchList from "./WatchList";
 import "../src/styles.css";
 import MovieData from "./MovieData.json";
+import MovieLists from "./MovieLists";
 
 export default function App() {
-  return <WatchList {...MovieData} />;
+  return <MovieLists {...MovieData} />;
 }
