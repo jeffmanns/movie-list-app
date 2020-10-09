@@ -7,13 +7,10 @@ const WatchList = (props) => {
   const [isWatched, setIsWatched] = useState(false);
 
   const handleClick = (id) => {
-    //isWatched = status;
-    //setIsWatched(movies[id].isWatched);
     const newMovieArray = [...movies];
     newMovieArray[id].isWatched = !movies[id].isWatched;
     setIsWatched(newMovieArray);
     console.log(newMovieArray);
-    //console.log(movies[id].isWatched);
     console.log(id);
   };
 

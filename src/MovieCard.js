@@ -7,7 +7,7 @@ const MovieCard = (props) => {
   const duration = props.duration;
   const rating = props.rating;
   const photoURL = props.photoURL;
-  var isWatched = props.isWatched;
+  const isWatched = props.isWatched;
 
   return (
     <div className="movie-container">
@@ -23,7 +23,11 @@ const MovieCard = (props) => {
         </div>
       </div>
       <div className="movie-container-footer">
-        <button onClick={() => props.onClick(id)}>dammit</button>
+        {isWatched ? (
+          <button onClick={(e) => props.onClick(id, e)}>Watched</button>
+        ) : (
+          <button onClick={(e) => props.onClick(id, e)}>Watch</button>
+        )}
       </div>
     </div>
   );
